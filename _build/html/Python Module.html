@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Python Module &mdash; Science With Python 2014.02.15 ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2014.02.15',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Science With Python 2014.02.15 ドキュメント" href="index.html" />
+    <link rel="next" title="3. Numpy" href="Numpy.html" />
+    <link rel="prev" title="1. About Python" href="About Python.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="Numpy.html" title="3. Numpy"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="About Python.html" title="1. About Python"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Science With Python 2014.02.15 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="python-module">
+<h1>2. Python Module<a class="headerlink" href="#python-module" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">著者:</th><td class="field-body">yuhma21</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h2>2.1. モジュールを試す<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>よく使う機能はモジュール化しておくと便利。モジュールはpythonの定義や文が
+入ったファイルで、拡張子に<strong>.py</strong>が入ったものになる。</p>
+<div class="section" id="id2">
+<h3>2.1.1. モジュールを作成する<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>下記のコードをテキストエディタで記述し、fibo.pyで同じプロジェクト内に保存する</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
+<span class="c"># -*- coding: utf-8 -*-</span>
+
+<span class="c"># フィボナッチ数列モジュール</span>
+
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>    <span class="c"># nまでのフィボナッチ級数を出力</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">b</span><span class="p">,</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+
+<span class="k">def</span> <span class="nf">fib2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c"># nまでのフィボナッチ級数を返す</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p><a class="reference download internal" href="_downloads/fibo.py"><tt class="xref download docutils literal"><span class="pre">fibo.py</span></tt></a></p>
+</div>
+<div class="section" id="id3">
+<h3>2.1.2. 作成したモジュールを使う<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>作成したモジュールは<strong>import</strong>で呼び出して使用します。
+<em>モジュール名=ファイル名</em>になります。</p>
+<p>呼び出し方には複数の方法があります。</p>
+<ol class="arabic simple">
+<li>単純に呼び出す</li>
+<li>単純に呼び出し簡単にアクセスする</li>
+<li>モジュール名を別名にして呼び出す</li>
+<li>使用する関数などを直接指定して呼び出す</li>
+</ol>
+<div class="section" id="id4">
+<h4>2.1.2.1. 単純に呼び出す<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fibo</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fibo</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
+</pre></div>
+</div>
+<p>import モジュール名にすると、モジュール名+関数名で機能を呼び出せます。
+同じ名前の関数名があった場合でもpythonインタープリタが迷わずに実行できます。</p>
+</div>
+<div class="section" id="id5">
+<h4>2.1.2.2. 単純に呼び出し簡単にアクセスする<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
+</pre></div>
+</div>
+<p>上記のように呼び出すと、関数名だけで実行できます。
+* はすべての関数を呼び出す。といった記号です。</p>
+<p>同じ関数名があった場合にインタープリタが迷う可能性があるので、お勧めしません。</p>
+</div>
+<div class="section" id="id6">
+<h4>2.1.2.3. モジュール名を別名として呼び出す<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">fibo</span> <span class="kn">as</span> <span class="nn">fi</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fi</span><span class="o">.</span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
+</pre></div>
+</div>
+<p>名前の長いモジュールを別の名前にします。
+matplotlibを利用する場合などによく使いします。</p>
+<p><strong>matplotlibの例</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="s">&#39;bo&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h4>2.1.2.4. 使用する関数などを直接指定して呼び出す<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="n">fib</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
+</pre></div>
+</div>
+<p>上記のように呼び出すと、fib2は実行できません。</p>
+<p>下記のように、複数の関数も指定できます</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">fibo</span> <span class="kn">import</span> <span class="n">fib</span><span class="p">,</span> <span class="n">fib2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fib</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="go">1 1 2 3 5 8 13 21 34 55 89 144 233 377</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>2.2. 標準モジュールを利用する<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Pythonには非常に多くの標準モジュールが搭載されています。その中の一部を紹介します。</p>
+<div class="section" id="id9">
+<h3>2.2.1. 組み込み関数<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><strong>組み込み関数一覧</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="18%" />
+<col width="20%" />
+<col width="18%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">組み込み関数</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+<th class="head">&nbsp;</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>abs()</td>
+<td>divmod()</td>
+<td>input()</td>
+<td>open()</td>
+<td>staticmethod()</td>
+</tr>
+<tr class="row-odd"><td>all()</td>
+<td>enumerate()</td>
+<td>int()</td>
+<td>ord()</td>
+<td>str()</td>
+</tr>
+<tr class="row-even"><td>any()</td>
+<td>eval()</td>
+<td>isinstance()</td>
+<td>pow()</td>
+<td>sum()</td>
+</tr>
+<tr class="row-odd"><td>basestring()</td>
+<td>execfile()</td>
+<td>issubclass()</td>
+<td>print()</td>
+<td>super()</td>
+</tr>
+<tr class="row-even"><td>bin()</td>
+<td>file()</td>
+<td>iter()</td>
+<td>property()</td>
+<td>tuple()</td>
+</tr>
+<tr class="row-odd"><td>bool()</td>
+<td>filter()</td>
+<td>len()</td>
+<td>range()</td>
+<td>type()</td>
+</tr>
+<tr class="row-even"><td>bytearray()</td>
+<td>float()</td>
+<td>list()</td>
+<td>raw_input()</td>
+<td>unichr()</td>
+</tr>
+<tr class="row-odd"><td>callable()</td>
+<td>format()</td>
+<td>locals()</td>
+<td>reduce()</td>
+<td>unicode()</td>
+</tr>
+<tr class="row-even"><td>chr()</td>
+<td>frozenset()</td>
+<td>long()</td>
+<td>reload()</td>
+<td>vars()</td>
+</tr>
+<tr class="row-odd"><td>classmethod()</td>
+<td>getattr()</td>
+<td>map()</td>
+<td>repr()</td>
+<td>xrange()</td>
+</tr>
+<tr class="row-even"><td>cmp()</td>
+<td>globals()</td>
+<td>max()</td>
+<td>reversed()</td>
+<td>zip()</td>
+</tr>
+<tr class="row-odd"><td>compile()</td>
+<td>hasattr()</td>
+<td>memoryview()</td>
+<td>round()</td>
+<td>__import__()</td>
+</tr>
+<tr class="row-even"><td>complex()</td>
+<td>hash()</td>
+<td>min()</td>
+<td>set()</td>
+<td>apply()</td>
+</tr>
+<tr class="row-odd"><td>delattr()</td>
+<td>help()</td>
+<td>next()</td>
+<td>setattr()</td>
+<td>buffer()</td>
+</tr>
+<tr class="row-even"><td>dict()</td>
+<td>hex()</td>
+<td>object()</td>
+<td>slice()</td>
+<td>coerce()</td>
+</tr>
+<tr class="row-odd"><td>dir()</td>
+<td>id()</td>
+<td>oct()</td>
+<td>sorted()</td>
+<td>intern()</td>
+</tr>
+</tbody>
+</table>
+<p><strong>組み込み関数を一部紹介</strong></p>
+<dl class="function">
+<dt id="abs">
+<tt class="descname">abs</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#abs" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>値xの絶対値を返す</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">abs</span><span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="mf">2.j</span><span class="p">)</span>
+<span class="go">2.23606797749979</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="bin">
+<tt class="descname">bin</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#bin" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>整数xを二進数の文字列に変換する</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">bin</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="go">&#39;0b1010&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="chr">
+<tt class="descname">chr</tt><big>(</big><em>i</em><big>)</big><a class="headerlink" href="#chr" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ASCIIコードがiになるような文字列を返す</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">chr</span><span class="p">(</span><span class="mi">49</span><span class="p">)</span>
+<span class="go">&#39;1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
+<span class="go">&#39;A&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="dict">
+<tt class="descname">dict</tt><big>(</big><span class="optional">[</span><em>arg</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#dict" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>新しい辞書型のデータを作成する</p>
+<div class="highlight-python"><pre>&gt;&gt;&gt; key=['a',　'b',　'c']
+&gt;&gt;&gt; value=[1, 2, 3]
+&gt;&gt;&gt; dict(zip(key, value))
+{'a': 1, 'c': 3, 'b': 2}</pre>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="dir">
+<tt class="descname">dir</tt><big>(</big><span class="optional">[</span><em>object</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#dir" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>objectの持つ名前のリストを返す</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">__builtin__</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">dir</span><span class="p">(</span><span class="n">__builtin__</span><span class="p">)</span>
+<span class="go">[&#39;ArithmeticError&#39;, &#39;AssertionError&#39;, &#39;AttributeError&#39;,</span>
+<span class="go">&#39;BaseException&#39;, &#39;BufferError&#39;, &#39;BytesWarning&#39;,</span>
+<span class="go">&#39;DeprecationWarning&#39;, &#39;EOFError&#39;, &#39;Ellipsis&#39;, &#39;Environme,</span>
+<span class="go">.....................]</span>
+</pre></div>
+</div>
+<p>自分の作成したモジュールで試してみましょう</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="float">
+<tt class="descname">float</tt><big>(</big><span class="optional">[</span><em>x</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#float" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>文字列を浮動小数点型に変換する</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="nb">float</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">float</span><span class="p">(</span><span class="s">&#39;0.01&#39;</span><span class="p">)</span>
+<span class="go">0.01</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="help">
+<tt class="descname">help</tt><big>(</big><span class="optional">[</span><em>object</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#help" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>objectの組み込みのヘルプを表示する</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">os</span><span class="p">)</span>
+<span class="go">Help on module os:</span>
+
+<span class="go">NAME</span>
+<span class="go">    os - OS routines for Mac, NT, or Posix depending on what system we&#39;re on.</span>
+
+<span class="go">FILE</span>
+<span class="go">    c:\python27\lib\os.py</span>
+
+<span class="go">DESCRIPTION</span>
+<span class="go">    This exports:</span>
+<span class="go">      - all functions from posix, nt, os2, or ce, e.g. unlink, stat, etc.</span>
+<span class="go">      - os.path is one of the modules posixpath, or ntpath</span>
+<span class="go">      - os.name is &#39;posix&#39;, &#39;nt&#39;, &#39;os2&#39;, &#39;ce&#39; or &#39;riscos&#39;</span>
+<span class="go">      - os.curdir is a string representing the current directory (&#39;.&#39; or &#39;:&#39;)</span>
+<span class="go">      - os.pardir is a string representing the parent directory (&#39;..&#39; or &#39;::&#39;)</span>
+<span class="go">      - os.sep is the (or a most common) pathname separator (&#39;/&#39; or &#39;:&#39; or &#39;\\&#39;)</span>
+<span class="go">      - os.extsep is the extension separator (&#39;.&#39; or &#39;/&#39;)</span>
+<span class="go">      - os.altsep is the alternate pathname separator (None or &#39;/&#39;)</span>
+<span class="go">      - os.pathsep is the component separator used in $PATH etc</span>
+<span class="go">      - os.linesep is the line separator in text files (&#39;\r&#39; or &#39;\n&#39; or &#39;\r\n&#39;)</span>
+<span class="go">      - os.defpath is the default search path for executables</span>
+<span class="go">      - os.devnull is the file path of the null device (&#39;/dev/null&#39;, etc.)</span>
+
+<span class="go">    Programs that import and use &#39;os&#39; stand a better chance of being</span>
+<span class="go">-- More  --</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Python Module</a><ul>
+<li><a class="reference internal" href="#id1">2.1. モジュールを試す</a><ul>
+<li><a class="reference internal" href="#id2">2.1.1. モジュールを作成する</a></li>
+<li><a class="reference internal" href="#id3">2.1.2. 作成したモジュールを使う</a><ul>
+<li><a class="reference internal" href="#id4">2.1.2.1. 単純に呼び出す</a></li>
+<li><a class="reference internal" href="#id5">2.1.2.2. 単純に呼び出し簡単にアクセスする</a></li>
+<li><a class="reference internal" href="#id6">2.1.2.3. モジュール名を別名として呼び出す</a></li>
+<li><a class="reference internal" href="#id7">2.1.2.4. 使用する関数などを直接指定して呼び出す</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">2.2. 標準モジュールを利用する</a><ul>
+<li><a class="reference internal" href="#id9">2.2.1. 組み込み関数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="About Python.html"
+                        title="前の章へ">1. About Python</a></p>
+  <h4>次のトピックへ</h4>
+  <p class="topless"><a href="Numpy.html"
+                        title="次の章へ">3. Numpy</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/Python Module.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="Numpy.html" title="3. Numpy"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="About Python.html" title="1. About Python"
+             >前へ</a> |</li>
+        <li><a href="index.html">Science With Python 2014.02.15 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, yuhma21.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2 で生成しました。
+    </div>
+  </body>
+</html>

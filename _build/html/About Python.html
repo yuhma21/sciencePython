@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. About Python &mdash; Science With Python 2014.02.15 ドキュメント</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2014.02.15',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="top" title="Science With Python 2014.02.15 ドキュメント" href="index.html" />
+    <link rel="prev" title="Welcome to Science With Python’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Science With Python’s documentation!"
+             accesskey="P">前へ</a> |</li>
+        <li><a href="index.html">Science With Python 2014.02.15 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-python">
+<h1>1. About Python<a class="headerlink" href="#about-python" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">著者:</th><td class="field-body">yuhma21</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="python-for-win">
+<h2>1.1. 便利なPythonを導入する（for win）<a class="headerlink" href="#python-for-win" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Pythonで科学技術計算を行うには、
+<a class="reference external" href="http://ipython.org/notebook.html">IPhython Notebook</a>
+が使いやすい。</p>
+<p><strong>使い方</strong></p>
+<ol class="arabic simple">
+<li><a class="reference external" href="https://code.google.com/p/pythonxy/">Python(x,y)</a>  をダウンロードしてインストール</li>
+<li>コマンドプロンプトで、<strong>ipython notebook &#8211;pylab inline</strong>を入力すれば起動。</li>
+<li>上記のコマンドをbatファイルに書き込めば簡単に起動が可能。</li>
+</ol>
+<p>python(x,y)は2.7系</p>
+</div>
+<div class="section" id="id1">
+<h2>1.2. データ型<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Pythonにはさまざまなデータ型がある</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="44%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Type</th>
+<th class="head">detail</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Integet</td>
+<td>整数型</td>
+</tr>
+<tr class="row-odd"><td>Floats</td>
+<td>小数点</td>
+</tr>
+<tr class="row-even"><td>Complex</td>
+<td>実数+虚数</td>
+</tr>
+<tr class="row-odd"><td>Booleans</td>
+<td>真偽</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>Integet</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="go">&lt;type &#39;int&#39;&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Floats</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">c</span> <span class="o">=</span> <span class="mf">2.1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="go">&lt;type &#39;float&#39;&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Complex</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">+</span> <span class="mf">0.5j</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">real</span>
+<span class="go">1.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">imag</span>
+<span class="go">0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="mf">1.</span> <span class="o">+</span> <span class="mi">0j</span><span class="p">)</span>
+<span class="go">&lt;type &#39;complex&#39;&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Boolean</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">4</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">test</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">type</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+<span class="go">&lt;type &#39;bool&#39;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>1.3. コンテナ<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>配列のようなもの</p>
+<ul class="simple">
+<li>リスト</li>
+<li>辞書</li>
+<li>タプル</li>
+<li>集合</li>
+</ul>
+<p>などがある</p>
+<p>また、科学技術計算用にNumpyモジュールの<strong>ndarray</strong>オブジェクトもある</p>
+<div class="section" id="id3">
+<h3>1.3.1. リスト<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>大かっこ<cite>[]</cite>でくくったオブジェクト群の事</p>
+<p><strong>リスト作成の例</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;red&#39;</span><span class="p">,</span> <span class="s">&#39;green&#39;</span><span class="p">,</span> <span class="s">&#39;yellow&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">&#39;yellow&#39;</span>
+</pre></div>
+</div>
+<p><strong>:</strong>リテラルを使うことで自由にリストから値を取り出せます。次の例では2つ目の要素からすべて取り出します</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="go">[2, 3, 4]</span>
+</pre></div>
+</div>
+<p>次の例では2,3要素を取り出します。1:3の後半の要素は含みません。</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">[2, 3]</span>
+</pre></div>
+</div>
+<p>後ろからの要素も指定でします。-1番目一番最後の要素になります</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="go">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[2, 3]</span>
+</pre></div>
+</div>
+<p>リストの中にリストを入れることもできますn
+下の例は2行4列の配列を作成しています</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">[5, 6, 7, 8]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">6</span>
+</pre></div>
+</div>
+<p>L配列の2列だけを取り出したいときは、リスト内包表記で取り出すのが便利です</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">ls</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">ls</span> <span class="ow">in</span> <span class="n">L</span><span class="p">]</span>
+<span class="go">[2, 6]</span>
+</pre></div>
+</div>
+<p>スマートでなくても、for文で記述しても構いません</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L2</span><span class="o">=</span><span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ls</span> <span class="ow">in</span> <span class="n">L</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="n">L1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ls</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L2</span>
+<span class="go">[2, 6]</span>
+</pre></div>
+</div>
+<p>リストからの要素の取り出しは、データを扱うに当たって重要な操作になります。慣れておいたほうがよろしいかと思います</p>
+<div class="section" id="id4">
+<h4>1.3.1.1. リストに関する重要な関数<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<dl class="function">
+<dt id="list.append">
+<tt class="descclassname">list.</tt><tt class="descname">append</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#list.append" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リストの末尾に<em>x</em>を追加します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="len">
+<tt class="descname">len</tt><big>(</big><em>list</em><big>)</big><a class="headerlink" href="#len" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リストの要素数を返します</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list.insert">
+<tt class="descclassname">list.</tt><tt class="descname">insert</tt><big>(</big><em>i</em>, <em>x</em><big>)</big><a class="headerlink" href="#list.insert" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定した位置iにxを挿入します</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list.remove">
+<tt class="descclassname">list.</tt><tt class="descname">remove</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#list.remove" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リスト中でxの値を持つ<strong>最初の要素</strong>を削除します。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list.pop">
+<tt class="descclassname">list.</tt><tt class="descname">pop</tt><big>(</big><em>i</em><big>)</big><a class="headerlink" href="#list.pop" title="この定義へのパーマリンク">¶</a></dt>
+<dt>
+<tt class="descclassname">list.</tt><tt class="descname">pop</tt><big>(</big><em>list</em><big>)</big></dt>
+<dd><p>リストからi番目の要素を取り出し、削除します。引数としてリスト型の要素も使用できます。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list.index">
+<tt class="descclassname">list.</tt><tt class="descname">index</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#list.index" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リストの中で値xを持っている最初の要素のインデックスを返す</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list.count">
+<tt class="descclassname">list.</tt><tt class="descname">count</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#list.count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>値xがリストに入っている個数を返す</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list.sort">
+<tt class="descclassname">list.</tt><tt class="descname">sort</tt><big>(</big><big>)</big><a class="headerlink" href="#list.sort" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リスト内の要素を昇順に並べる</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list.reverse">
+<tt class="descclassname">list.</tt><tt class="descname">reverse</tt><big>(</big><big>)</big><a class="headerlink" href="#list.reverse" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リスト内の要素を降順に並べる</p>
+</dd></dl>
+
+<p><strong>関数の使用例</strong></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="go">&gt;&gt;&gt;#最後の要素に5を追加</span>
+<span class="go">&gt;&gt;&gt;L.append(5)</span>
+<span class="go">&gt;&gt;&gt;L</span>
+<span class="go">[1, 2, 3, 4, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c">#リストの最後に配列を追加</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">L</span>
+<span class="go">[1, 2, 3, 4, 5, 6, 7, 8]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">目次</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. About Python</a><ul>
+<li><a class="reference internal" href="#python-for-win">1.1. 便利なPythonを導入する（for win）</a></li>
+<li><a class="reference internal" href="#id1">1.2. データ型</a></li>
+<li><a class="reference internal" href="#id2">1.3. コンテナ</a><ul>
+<li><a class="reference internal" href="#id3">1.3.1. リスト</a><ul>
+<li><a class="reference internal" href="#id4">1.3.1.1. リストに関する重要な関数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>前のトピックへ</h4>
+  <p class="topless"><a href="index.html"
+                        title="前の章へ">Welcome to Science With Python&#8217;s documentation!</a></p>
+  <h3>このページ</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/About Python.txt"
+           rel="nofollow">ソースコードを表示</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>クイック検索</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="検索" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    モジュール、クラス、または関数名を入力してください
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Science With Python’s documentation!"
+             >前へ</a> |</li>
+        <li><a href="index.html">Science With Python 2014.02.15 ドキュメント</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, yuhma21.
+      このドキュメントは <a href="http://sphinx-doc.org/">Sphinx</a> 1.2 で生成しました。
+    </div>
+  </body>
+</html>
