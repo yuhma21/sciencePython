@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>4. コンピュータビジョン &mdash; Science With Python 2014.02.15 ドキュメント</title>
+    <title>4. Computer Vision &mdash; Science With Python 2014.02.15 ドキュメント</title>
     
     <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -46,8 +46,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="id1">
-<h1>4. コンピュータビジョン<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+  <div class="section" id="computer-vision">
+<h1>4. Computer Vision<a class="headerlink" href="#computer-vision" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -56,8 +56,8 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="id2">
-<h2>4.1. 基本的な画像処理<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<div class="section" id="id1">
+<h2>4.1. 基本的な画像処理<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="section" id="pil">
 <h3>4.1.1. PILを利用する<a class="headerlink" href="#pil" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>PIL(Python Imaging Library)は画像に関する操作が自在に可能。
@@ -128,15 +128,15 @@
 </dd></dl>
 
 </div>
-<div class="section" id="id3">
-<h4>4.1.1.2. サムネイルの作成<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id2">
+<h4>4.1.1.2. サムネイルの作成<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">pil_im</span><span class="o">.</span><span class="n">thumbnail</span><span class="p">((</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>指定したサイズにサムネイルを作成してくれる</p>
 </div>
-<div class="section" id="id4">
-<h4>4.1.1.3. 領域のコピーと貼り付け<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id3">
+<h4>4.1.1.3. 領域のコピーと貼り付け<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>画像を切り抜くにはcrop()メソッドを利用する</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">box</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
 <span class="n">region</span> <span class="o">=</span> <span class="n">pil_im</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
@@ -148,8 +148,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="id5">
-<h4>4.1.1.4. 拡大縮小と回転<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h4>
+<div class="section" id="id4">
+<h4>4.1.1.4. 拡大縮小と回転<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h4>
 <p>画像のサイズを変更するには、resizeメソッドを利用する。その際、サイズをタプルで指定する</p>
 <p>画像を回転するには、rotate()メソッドを利用する。引数は時計回りの角度(degree)で指定する</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/env python</span>
@@ -190,13 +190,13 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">目次</a></h3>
   <ul>
-<li><a class="reference internal" href="#">4. コンピュータビジョン</a><ul>
-<li><a class="reference internal" href="#id2">4.1. 基本的な画像処理</a><ul>
+<li><a class="reference internal" href="#">4. Computer Vision</a><ul>
+<li><a class="reference internal" href="#id1">4.1. 基本的な画像処理</a><ul>
 <li><a class="reference internal" href="#pil">4.1.1. PILを利用する</a><ul>
 <li><a class="reference internal" href="#jpg">4.1.1.1. jpgファイルリストを取得</a></li>
-<li><a class="reference internal" href="#id3">4.1.1.2. サムネイルの作成</a></li>
-<li><a class="reference internal" href="#id4">4.1.1.3. 領域のコピーと貼り付け</a></li>
-<li><a class="reference internal" href="#id5">4.1.1.4. 拡大縮小と回転</a></li>
+<li><a class="reference internal" href="#id2">4.1.1.2. サムネイルの作成</a></li>
+<li><a class="reference internal" href="#id3">4.1.1.3. 領域のコピーと貼り付け</a></li>
+<li><a class="reference internal" href="#id4">4.1.1.4. 拡大縮小と回転</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +210,7 @@
                         title="前の章へ">3. Numpy</a></p>
   <h3>このページ</h3>
   <ul class="this-page-menu">
-    <li><a href="_sources/コンピュータビジョン.txt"
+    <li><a href="_sources/Computer Vision.txt"
            rel="nofollow">ソースコードを表示</a></li>
   </ul>
 <div id="searchbox" style="display: none">

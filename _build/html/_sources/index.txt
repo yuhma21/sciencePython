@@ -15,7 +15,7 @@ Contents:
    About Python
    Python Module
    Numpy
-   コンピュータビジョン
+   Computer Vision
 
 
 Indices and tables

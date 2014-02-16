@@ -1,5 +1,5 @@
 ======================
-コンピュータビジョン
+Computer Vision
 ======================
 
 :著者: yuhma21
@@ -122,3 +122,29 @@ imtools.pyというファイルを作成し下記の命令文を加える
 
 画像を回転するには、rotate()メソッドを利用する。引数は時計回りの角度(degree)で指定する
 
+.. code-block:: python
+
+   #!/usr/bin/env python
+   # -*- coding: utf-8 -*-
+   
+   from PIL import Image
+   import matplotlib.pyplot as plt
+   
+   #画像を読み込む
+   pil_im = Image.open('empire.jpg')
+   
+   #画像をコピーする領域をタプルに格納
+   region = (100, 100, 400, 400)
+   #画像をコピーして格納
+   cpy_im = pil_im.crop(region)
+   #画像を回転して格納
+   cpy_im = cpy_im.rotate(180)
+   #コピーした位置と同じ位置に貼り付け
+   pil_im.paste(cpy_im, region)
+   
+   #画像を表示
+   plt.figure()
+   plt.imshow(pil_im)
+   plt.show()
+
+.. image:: /cv/rotePaste.png
