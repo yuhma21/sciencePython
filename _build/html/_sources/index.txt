@@ -16,6 +16,7 @@ Contents:
    Python Module
    Numpy
    Computer Vision
+   About PIL
 
 
 Indices and tables

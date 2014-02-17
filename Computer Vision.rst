@@ -22,15 +22,15 @@ PIL(Python Imaging Library)は画像に関する操作が自在に可能。
 
    #!/usr/bin/env python
    # -*- coding: utf-8 -*-
-   
+
    from PIL import Image
-   
+
    #画像を読み込む
    pil_im = Image.open('empire.jpg')
-   
+
    #画像を読み込んでグレースケールに変換する
    im_gray =Image.open('empire.jpg').convert('L')
-   
+
    #画像を表示する
    import matplotlib.pyplot as plt
    plt.figure()
@@ -55,9 +55,9 @@ imtools.pyというファイルを作成し下記の命令文を加える
 
    #!/usr/bin/env python
    # -*- coding: utf-8 -*-
-   
+
    import os
-   
+
    def get_imlist(path):
        return [os.path.join(path, f) for f in os.listdir(path) if f.endswith('.jpg')]
 
@@ -126,13 +126,13 @@ imtools.pyというファイルを作成し下記の命令文を加える
 
    #!/usr/bin/env python
    # -*- coding: utf-8 -*-
-   
+
    from PIL import Image
    import matplotlib.pyplot as plt
-   
+
    #画像を読み込む
    pil_im = Image.open('empire.jpg')
-   
+
    #画像をコピーする領域をタプルに格納
    region = (100, 100, 400, 400)
    #画像をコピーして格納
@@ -141,10 +141,11 @@ imtools.pyというファイルを作成し下記の命令文を加える
    cpy_im = cpy_im.rotate(180)
    #コピーした位置と同じ位置に貼り付け
    pil_im.paste(cpy_im, region)
-   
+
    #画像を表示
    plt.figure()
    plt.imshow(pil_im)
    plt.show()
 
 .. image:: /cv/rotePaste.png
+
