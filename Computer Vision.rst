@@ -149,3 +149,6 @@ imtools.pyというファイルを作成し下記の命令文を加える
 
 .. image:: /cv/rotePaste.png
 
+Numpy
+-------------------------
+
